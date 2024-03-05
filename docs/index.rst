@@ -79,6 +79,8 @@ empanada-napari
             Share your model
 
 
+This version of empanada-napari was created by Abhishek Bhardwaj and Madeline Barry `<https://cmm.ccr.cancer.gov/volume-em/>`_ :octicon:`link-external`
+
 Citing this work
 ==================
 
