@@ -37,20 +37,23 @@ Conda Installation
 New User Installation
 =====================
 
-1. If you've previously installed and used conda, it's recommended (but optional) to create a new virtual environment in order to avoid dependency conflicts::
+#. If you've previously installed and used conda, it's recommended (but optional) to create a new virtual environment in order to avoid dependency conflicts::
 
     conda create -y -n empanada -c conda-forge python=3.9
+
+#. Activate the new environment::
+
     conda activate empanada
 
-2. Install pyqt with conda::
+#. Install pyqt with conda::
 
     conda install pyqt
 
-3. Install napari with pip::
+#. Install napari with pip::
 
     pip install "napari[all]"
 
-4. To verify installation, run::
+#. To verify installation, run::
 
     napari
 
@@ -81,6 +84,8 @@ If you still don't see it, try installing the plugin with pip::
 
     pip install empanada-napari=1.1.0
 
+
+If you encounter an error during the installation process, check out the :ref:`FAQ <faqs>` section for useful tips to troubleshoot.
 
 .. _update-install:
 

@@ -67,3 +67,18 @@ Current image demo example
   :width: 500px
   :alt: Example of output for a volume dataset for the count labels module.
 
+
+
+Panoptic labels example:
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. image:: ../_static/count-panoptic-demo.gif
+    :width: 8000px
+    :align: center
+    :alt: Count Panoptic Labels Module Demo
+
+.. image:: ../_static/panop_terminal.png
+  :align: center
+  :width: 500px
+
+

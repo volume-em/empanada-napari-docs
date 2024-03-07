@@ -40,6 +40,29 @@ General questions
     If you still face difficulties, consider creating a new virtual environment to avoid dependency conflicts
 
 
+.. dropdown:: I got an "openMP/OMP related error" while working in empanada-napari.
+
+    If you get "openMP/OMP related error", try following these steps:
+
+    #. Try uninstalling pyqt using conda::
+
+        conda uninstall -y pyqt
+
+    #. Install and upgrade napari using pip::
+
+        pip install napari --upgrade
+
+    #. Install pyqt using pip::
+
+        pip install pyqt5
+
+    #. Open napari and try running the empanada-napari modules again.
+
+    .. note::
+
+        If this does not resolve the issue, contact us with the error log at nci-cmm@mail.nih.gov
+
+
 .. dropdown:: What are the hardware requirements to use empanada-napari?
 
     Empanada-napari can run inference, finetuning, and training modules on GPU and CPU. Though running these processes
@@ -53,14 +76,15 @@ General questions
 
     * **GPU Support:** Having a GPU installed on your system will significantly increase model throughput, although CPU optimized versions of all models are shipped with the plugin. The plugin relies on pytorch for running models, and GPU drivers must be correctly installed for GPU usage.
 
-    * **Memory:** Ensure sufficient memory to handle the processing requirements of deep learning-based image segmentation tasks. 32G should be sufficient.
+    * **Memory:** Ensure sufficient memory to handle the processing requirements of deep learning-based image segmentation tasks. *32G should be sufficient.*
 
-    * **Storage:** Adequate storage space to store datasets, models, and any intermediate results generated during inference or training. 256G should be sufficient.
+    * **Storage:** Adequate storage space to store datasets, models, and any intermediate results generated during inference or training. *256G should be sufficient.*
 
 .. dropdown:: Why are my denoised images giving me worse results?
 
-    MitoNet was trained on images from CEM1.5M that were denoised with histogram equalization, while techniques like noise2void use a distinct denoising method.
-    This variance in denoising techniques causes a significant shift in the characteristics of the data, leading to subpar outcomes when applying MitoNet to denoised images.
+    MitoNet was trained on images from CEM1.5M that were denoised with histogram equalization, while techniques like noise2void
+    use a distinct denoising method. This variance in denoising techniques causes a significant shift in the characteristics
+    of the data, leading to subpar results when applying MitoNet to denoised images.
 
 
 

@@ -43,6 +43,12 @@ Output
 
 **Remove boundary labels:** Removes labels on the boundaries of an image and saves as a new napari labels layer.
 
+.. note::
+
+    Removing boundary labels with the 3D volume option selected can take time depending on the number of instances in the label map.
+    For example, when applied to a label map that had ~250 labels, it took roughly ~3 minutes on a mac laptop but for a label map that had ~500
+    instances it took ~10 minutes to complete on the same mac laptop.
+
 
 Demos
 =========
