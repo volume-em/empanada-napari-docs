@@ -3,7 +3,7 @@
 Count Labels
 ---------------
 
-.. image:: ../_static/count-labels-module.png
+.. image:: ../_static/count-module.png
   :align: center
   :width: 500px
   :alt: Dialog for the count labels module.
@@ -40,45 +40,63 @@ Counts the number of instances for each class on the selected label layer and pr
 An Excel file will be created with the list of label IDs for each image, stack of images, or for the full volume if selected.
 
 
-Demo
+Demos
 ======
 
-Current image demo example
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. tab-set::
 
-.. image:: ../_static/count-label-demo.gif
-    :width: 8000px
-    :align: center
-    :alt: Count Labels Module Demo
+    .. tab-item:: Single Class
 
-2D patches terminal output example:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. image:: ../_static/batch_count.png
-  :align: center
-  :width: 500px
-  :alt: Example of output for 5 2D images in a stack for the count labels module.
-
-3D volume or z-stack terminal output example:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. image:: ../_static/volume_count.png
-  :align: center
-  :width: 500px
-  :alt: Example of output for a volume dataset for the count labels module.
+        .. image:: ../_static/count-label-demo.gif
+            :width: 8000px
+            :align: center
+            :alt: Count Labels Module Demo
 
 
+        .. tab-set::
 
-Panoptic labels example:
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+            .. tab-item:: Current image
 
-.. image:: ../_static/count-panoptic-demo.gif
-    :width: 8000px
-    :align: center
-    :alt: Count Panoptic Labels Module Demo
+                .. image:: ../_static/single_count.png
+                    :align: center
+                    :width: 500px
 
-.. image:: ../_static/panop_terminal.png
-  :align: center
-  :width: 500px
+            .. tab-item:: 2D patches
+
+                .. image:: ../_static/batch_count.png
+                    :align: center
+                    :width: 500px
+
+            .. tab-item:: 3D volume or z-stack
+
+                .. image:: ../_static/volume_count.png
+                    :align: center
+                    :width: 500px
+
+    .. tab-item:: Multiclass (panoptic)
+
+        .. image:: ../_static/count-panoptic-demo.gif
+            :width: 8000px
+            :align: center
+            :alt: Count Panoptic Labels Module Demo
 
 
+        .. tab-set::
+
+            .. tab-item:: Current image
+
+                .. image:: ../_static/panop_current.png
+                    :align: center
+                    :width: 500px
+
+            .. tab-item:: 2D patches
+
+                .. image:: ../_static/panop_batch.png
+                    :align: center
+                    :width: 500px
+
+            .. tab-item:: 3D volume or z-stack
+
+                .. image:: ../_static/panop_volume.png
+                    :align: center
+                    :width: 500px

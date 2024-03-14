@@ -9,7 +9,7 @@ Tutorials
 
     .. grid-item-card:: Step by step guide for 2D image inference.
         :shadow: md
-        :img-top: ../_static/demo.gif
+        :img-top: ../_static/2d-tutorial-updated.png
 
         Learn how to run 2D inference with this step-by-step guide.
 
@@ -24,7 +24,7 @@ Tutorials
 
     .. grid-item-card:: Step by step guide for volumetric inference.
         :shadow: md
-        :img-top: ../_static/view3d.png
+        :img-top: ../_static/3d-labels.png
 
         Apply similar techniques from the 2D inference tutorial for running inference on volumetric data.
 
@@ -38,7 +38,7 @@ Tutorials
             3D Inference Tutorial
 
     .. grid-item-card:: Finetune an existing model
-        :img-top: ../_static/ft_example.png
+        :img-top: ../_static/ft_updated.png
         :shadow: md
 
         Follow the finetuning a model's step-by-step guide to help you learn how to tailor MitoNet and MitoNet_mini for

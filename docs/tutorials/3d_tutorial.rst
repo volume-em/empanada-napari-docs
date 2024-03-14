@@ -79,7 +79,7 @@ Visualizing the results
 Results can be visualized in 3D by toggling the 3D viewer (red arrow).
 Turn on and off the stack inference results and compare them to ortho-plane results.
 
-.. image:: ../_static/view3d.png
+.. image:: ../_static/view3d-updated.png
   :align: center
   :width: 600px
 
@@ -99,7 +99,7 @@ Exporting 3D
 
 To save, simply select one or more layers and "Save selected layers":
 
-.. image:: ../_static/save3d.png
+.. image:: ../_static/3d-export-example.png
   :align: center
   :width: 600px
 

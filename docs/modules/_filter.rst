@@ -41,7 +41,20 @@ Output
 
 **Remove small labels:** Filters and removes labels smaller than a user selected threshold and saves as a new napari labels layer.
 
+
+.. note::
+
+    If the **Minimum pixel/voxel area** value is too small, there will be a printout in the terminal stating the smallest
+    label ID and its corresponding area/volume. See example below.
+
+    .. image:: ../_static/small_area_example.png
+        :width: 50%
+        :align: center
+
+
+
 **Remove boundary labels:** Removes labels on the boundaries of an image and saves as a new napari labels layer.
+
 
 .. note::
 

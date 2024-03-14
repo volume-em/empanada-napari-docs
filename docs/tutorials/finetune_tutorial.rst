@@ -26,7 +26,7 @@ First, decide which model to finetune by using the :ref:`Get model info <get-mod
 the dropdown list, and clicking the "Print info to terminal" button. For this tutorial let's have
 a look at the MitoNet_v1_mini model:
 
-.. image:: ../_static/model_info.png
+.. image:: ../_static/model-info-updated.png
   :align: center
   :width: 100%
 
@@ -105,7 +105,7 @@ is a good starting point, but increasing the number of iterations may yield bett
 model like MitoNet, training for more than 500 iterations shouldn't be necessary unless you've annotated a lot
 of images.
 
-.. image:: ../_static/ft_example.png
+.. image:: ../_static/ft_example_updated.png
   :align: center
   :width: 100%
 

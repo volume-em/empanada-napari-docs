@@ -30,9 +30,9 @@ model finetuning and training. If the image and labels layers are
 flipbooks, only the middle image in each flipbook is saved.
 
 
-.. image:: ../_static/save-patches-example.png
+.. image:: ../_static/save-patches-ex-updated.png
   :align: center
 
 .. note::
 
-    When saving flipbooks, remember that only the middle image will be saved. Be
+    When saving flipbooks, remember that only the middle image will be saved!

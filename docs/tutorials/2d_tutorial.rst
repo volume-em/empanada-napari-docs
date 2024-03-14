@@ -38,7 +38,7 @@ and click "Open":
 Tuning downsampling
 """"""""""""""""""""""
 
-.. image:: ../_static/plugin_2d.png
+.. image:: ../_static/plugin_2d_updated.png
   :align: left
   :width: 500px
 
@@ -94,7 +94,7 @@ Using Batch Mode
 Batch mode lets you run inference with a given parameter configuration on all images in the
 stack. Running with the options shown on left will create a single segmentation layer.
 
-.. image:: ../_static/select_batch_mode.png
+.. image:: ../_static/2d-batch-mode.png
   :align: center
   :width: 50%
 
@@ -114,11 +114,12 @@ delete labels.
     When proofreading and applying edits, it is recommended to duplicate the labels layer. At this time, empanada-napari
     does not support an "undo" function. This is a pain point we mean to address in the future.
 
-Let's look at the second image in the stack. First, select the labels layer in the lower left hand panel
-(**b**). Next, select the dropper tool, denoted by the green arrow in panel **a**, and click on the label you'd like to edit.
-Paint and erase tools are denoted by the blue and red arrows in **a**, respectively. Simply click and drag to make corrections.
+Let's look at the second image in the stack. First, duplicate the labels layer by rick clicking on the layer and selecting
+duplicate layer (panel **b** orange arrow). Then, select the new labels layer in the lower left hand panel (**c**). Next,
+select the dropper tool, denoted by the green arrow in panel **a**, and click on the label you'd like to edit. Paint and
+erase tools are denoted by the blue and red arrows in **a**, respectively. Simply click and drag to make corrections.
 
-.. image:: ../_static/paint-erase-updated.png
+.. image:: ../_static/paint-erase-example.png
   :align: center
   :width: 100%
 
@@ -135,7 +136,7 @@ Minimum distance slider will control how many fragments the label gets split int
 
 Repeat the merge operation by placing the four dots shown in the top right of the figure.
 
-.. image:: ../_static/split-updated-tutorial.png
+.. image:: ../_static/merge-split-updated.png
   :align: center
   :width: 100%
 
