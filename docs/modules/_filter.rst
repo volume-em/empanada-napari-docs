@@ -48,7 +48,6 @@ Output
     label ID and its corresponding area/volume. See example below.
 
     .. image:: ../_static/small_area_example.png
-        :width: 50%
         :align: center
 
 

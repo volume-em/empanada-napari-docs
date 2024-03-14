@@ -6,7 +6,7 @@ Count Labels
 .. image:: ../_static/count-module.png
   :align: center
   :width: 500px
-  :alt: Dialog for the count labels module.
+
 
 
 Parameters
