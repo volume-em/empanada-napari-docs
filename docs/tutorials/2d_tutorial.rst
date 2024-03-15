@@ -127,18 +127,28 @@ To run merge, split, delete, and morph operations, create a new points layer (re
 Place points by clicking the circle with a plus sign (panel **a**) and clicking in the viewer window.
 The model output is shown in the top left corner of the figure below. After placing points on the
 yellow and purple labels, click the **Merge labels** button. Make sure that the labels layer matches
-the layer you're working on (seen panel **b** in the previous figure), if not you'll get an "out-of-bounds"
+the layer you're working on (see panel **b** in the previous figure), if not you'll get an "out-of-bounds"
 error. Also, always leave the Apply 3D button unchecked when proofreading in 2D.
 
 This overmerges the two instances. To split them, place a single point anywhere on the yellow label and
-click the **Split labels** button (again making sure the labels layer selected is correct). Adjusting the
-Minimum distance slider will control how many fragments the label gets split into.
+click the **Split labels** button (again making sure the labels layer selected is correct). The **Minimum distance** parameter
+applies watershed to determine new instances, and **Minimum distance** slider will control how many fragments the label gets split into.
 
-Repeat the merge operation by placing the four dots shown in the top right of the figure.
+Repeat the merge operation by placing the four points shown in the top right of the figure.
 
 .. image:: ../_static/merge-split-updated.png
   :align: center
   :width: 100%
+
+.. tip::
+
+    If you are working with smaller patches that will later be stitched together, you may want to specify the new
+    label IDs when using the :ref:`Split Labels <split-labels>` module. To do this, select the box labeled **Specify new label IDs**
+    and type in the new label ID number.
+
+    .. note::
+
+        If you enter 2001 into the **Start new label ID** box, the new label IDs will begin from 2001, 2002, and so on.
 
 
 Exporting 2D

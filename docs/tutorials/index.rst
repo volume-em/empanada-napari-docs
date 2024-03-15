@@ -11,7 +11,7 @@ Tutorials
         :shadow: md
         :img-top: ../_static/2d-tutorial-updated.png
 
-        Learn how to run 2D inference with this step-by-step guide.
+        Learn how to run 2D inference in empanada-napari with this step-by-step guide.
 
         +++
         .. button-ref:: 2d-inference-tutorial
@@ -38,15 +38,15 @@ Tutorials
             3D Inference Tutorial
 
     .. grid-item-card:: Finetune an existing model
-        :img-top: ../_static/ft_updated.png
+        :img-top: ../_static/ft-updated.png
         :shadow: md
 
-        Follow the finetuning a model's step-by-step guide to help you learn how to tailor MitoNet and MitoNet_mini for
-        your specific dataset needs.
+        Follow the finetuning an existing model's step-by-step guide to help you learn how to tailor MitoNet_mini for
+        a specific dataset's needs.
 
         +++
 
-        .. button-ref:: finetune-model
+        .. button-ref:: finetune-tutorial
             :ref-type: ref
             :click-parent:
             :color: primary

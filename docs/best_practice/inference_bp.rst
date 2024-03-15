@@ -47,17 +47,41 @@ satisfactory results (see example below).
 
 
 Tweaking the **Segmentation Confidence Threshold** is often just a proxy for erosion and dilation of labels.
-Because ortho-plane inference averages segmentations from 3 views using a lower confidence
+Because ortho-plane inference averages segmentations from 3 views, using a lower confidence
 threshold is sometimes beneficial: try 0.3 instead of 0.5.
 
-The **Center Confidence Threshold** and **Centers Minimum Distance** parameters both control how split up
+The **Center Confidence Threshold** and **Centers Minimum Distance** parameters both control how "split up"
 instances will be in 2D. Raising the confidence threshold will result in fewer object centers
 and therefore fewer instances in the segmentation. Increasing the minimum distance
-will filter out centers that are too close together. This can help if you notice
-that long objects are being over-split.
+will filter out centers that are too close together. This can help if long objects are being over-split. If you notice
+that the borders between instances are too "blocky", selecting the **Fine boundaries** option may be useful.
+However, this comes at the cost of 4x more memory usage during postprocessing, so use it wisely!
 
-Lastly for 2D parameters, the **Fine boundaries** option may be useful if the borders between instances
-are too "blocky". This comes at the cost of 4x more memory usage during postprocessing though, so use it wisely.
+The **Max objects per class** can also be thought of as the label divisor. That means, when the model used to run inference has a label divisor
+of *None*, simply put 0 in this box. This will start the label IDs at 1 (see note). To determine label divisor used by the model, open the
+:ref:`Get model info <get-model-info>` module and print the model's description in the terminal.
+
+.. note::
+
+    You can keep the **Max objects per class** at the preset value of 10,000 even if the model's label divisor is *None*. This will just
+    start the label IDs at 10001.
+
+
+2D inference using batch mode and output to layer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Selecting the **Batch mode** option in the :ref:`2D Inference (Parameter Testing) <2d-inference>` module, will apply the adjusted
+parameters to each image in the stack. The label ID values for each image in the stack, will begin at the **Max objects per class** + 1.
+(See above for more details).
+
+The **Output to layer** and **output layer** box are used when running inference on patches or flipbooks created in the
+:ref:`Pick finetune/training patches <pick-patches>` module. However, you can not use **Batch mode** with the **Output to layer**
+option. Instead, you can simply run 2D inference using batch mode, then create the finetune/training patches and select the **Pick paired data** option.
+
+.. note::
+
+    Remember when applying any edits to your segmentations after using batch mode, keep the **Apply in 3D** box **unchecked**!
+    See :ref:`Proofreading Best Practices <proofreading_tips>` for best practices and other tips and tricks!
 
 
 3D inference best practices
@@ -71,7 +95,7 @@ slices by flipping the volume and scrolling through the stack.
 
 .. tip::
 
-    If results appear substantially better on slices from a particular plane, then use that plane as the **Inference plane** for
+    If results appear substantially better on slices from a particular plane, then use this as the **Inference plane** for
     3D inference. Similarly, if results on xy slices are good but results on xz and yz slices are poor,
     then using ortho-plane inference is not recommended.
 
@@ -87,7 +111,7 @@ object that you see. Divide the volume of the box by 2 to get the approximate vo
 would fit inside that box. Pick some number a few hundred voxels below that threshold as your min size.
 Likewise, the min extent should be a few increments less than the smallest dimension of the bounding box.
 
-The **Voxel Vote Thr Out of 3** and **Permit detections found in 1 stack into consensus** are options
+The **Voxel Vote Threshold Out of 3** and **Permit detections found in 1 stack into consensus** are options
 for when there are too many false negatives after ortho-plane segmentation. Decreasing the voxel
 vote threshold to 1 will fill in more voxels but should not increase the number of false positive detections
 very much. This is because the voxel vote threshold only affects detections that were picked up in more than 1 of the
