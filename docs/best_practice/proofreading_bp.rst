@@ -11,23 +11,23 @@ any corrections to a duplicated labels layer and periodically export your segmen
     It is helpful to rename the duplicated layer in napari to something that is easily identifiable. You may need to close and
     reopen the modules to see the new name in the dropdown menus.
 
-    .. dropdown:: Steps on how to duplicate and rename image layers.
+    .. dropdown:: Steps on how to duplicate and rename image layers:
 
         To create a duplicated labels layer:
 
-        *. Select the layer you want to duplicate in the napari layers list (panel **a**)
+        #. Select the layer you want to duplicate in the napari layers list (panel a)
 
-        *. Then right click, and select **Duplicate layer** (panel **b**).
+        #. Then right click, and select **Duplicate layer** (panel b).
 
-        *. To rename the newly created layer, double click the layer. This will highlight the text and you can enter in the new name (panel **c** and **d**)
+        #. To rename the newly created layer, double click the layer. This will highlight the text and you can enter in the new name (panel c and d)
 
         |pic1| |pic2|
 
         .. |pic1| image:: ../_static/layer-dup-a.png
-           :width: 45%
+           :width: 50%
 
         .. |pic2| image:: ../_static/layer-dup-c.png
-           :width: 45%
+           :width: 50%
 
 
 After creating finetune/training patches, it is helpful to either hide the original grayscale and label layers or
@@ -48,7 +48,15 @@ adjusting (orange arrows) the module panels may also help.
 One way to correct over-merged instances, is to *erode* the label using the :ref:`Morph Labels <morph-labels>` module until the borders of the objects are clear.
 Then place points where you would like the new centers to be and use the :ref:`Split Labels <split-labels>` module (with
 the **Use points as markers** option selected). After the labels have been accurately seperated, you can then *dilate* the labels
-using the **Morph Labels** module. Another option is to erase the unwanted parts (most likely the *connecting branches*) and then split the labels. This
+using the **Morph Labels** module.
+
+.. image:: ../_static/morph-split-example.pmg
+    :align: center
+    :width: 100%
+
+
+
+Another option is to erase the unwanted parts (most likely the *connecting branches*) and then split the labels. This
 can potentially take longer if labels are in 3D as you will need to scroll through the stack and erase on each slice.
 
 
