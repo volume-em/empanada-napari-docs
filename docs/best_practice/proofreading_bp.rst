@@ -69,5 +69,6 @@ The :ref:`Filter labels <filter-labels>` module will print out the list of label
 and **remove boundary labels** options. If the value entered in the **Minimum pixel/voxel area** is too small, the terminal will
 display the smallest label ID and it's corresponding area.
 
-
+.. image:: ../_static/small_area_example.png
+    :align: center
 

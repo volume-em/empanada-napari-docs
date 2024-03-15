@@ -1,7 +1,7 @@
 .. _finetune-tutorial:
 
 Finetuning an existing model
--------------------------------
+============================
 
 Finetuning a model involves modifying different parts of a pretrained model to better suit the characteristics of your data.
 
@@ -126,7 +126,6 @@ c_elegans_em.tif image.
 
 .. image:: ../_static/3d-inference-raw-output.png
     :align: center
-    :width: 50%
 
 
 As you can see, the model does "okay" but it struggles in more complicated areas. To pick finetuning patches from these
@@ -149,7 +148,7 @@ Remember that only the middle image will need to be edited!
 
 .. image:: ../_static/pick-paired-example.png
     :align: center
-    :width: 75%
+
 
 Once you have finished making corrections, use the :ref:`Save finetune/training patches <save-patches>` module to save
 the flipbook images and their corresponding labels layer (middle right panel).
@@ -169,7 +168,7 @@ from the `Creating patches from paired data` section above (see note).
 
     .. image:: ../_static/finetune-val-example.png
         :align: center
-        :width: 50%
+
 
 Setting the "Finetubale layers" to "all" means that all encoder layers will be finetuned. This generally gives better
 results, but training with fewer finetunable layers will require less memory and time. 100 training iterations
@@ -180,6 +179,8 @@ of images.
 .. image:: ../_static/ft_example_updated.png
   :align: center
   :width: 100%
+
+
 
 Once finetuning finishes, the model will appear in dropdowns across all other modules in the plugin. If it
 doesn't, close the module and reopen it. Unsurprisingly, we see that a finetuned model works much better on
