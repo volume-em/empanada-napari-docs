@@ -19,7 +19,7 @@ any corrections to a duplicated labels layer and periodically export your segmen
 
         #. Then right click, and select **Duplicate layer** (panel b).
 
-        #. To rename the newly created layer, double click the layer. This will highlight the text and you can enter in the new name (panel c and d)
+        #. To rename the newly created layer, double click the layer. This will highlight the text and you can enter in the new name (panel c and d). 
 
         |pic1| |pic2|
 
