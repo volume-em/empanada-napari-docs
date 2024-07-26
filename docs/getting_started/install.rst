@@ -6,6 +6,11 @@ Installation
 napari is still considered alpha phase software and may not install correctly on the
 first attempt, if that happens please reach out to the napari developers directly `here <https://github.com/napari/napari/issues>`_.
 
+.. important::
+
+    **empanada-napari version 1.1.1 is now available!** This latest version has minor bug fixes regarding the Filter Labels and Count Labels modules.
+    We have also frozen the numba (0.59.0) and napari (0.4.18) versions to avoid dependency conflicts.
+
 
 .. note::
 
@@ -37,7 +42,11 @@ Conda Installation
 New User Installation
 =====================
 
-#. If you've previously installed and used conda, it's recommended (but optional) to create a new virtual environment in order to avoid dependency conflicts::
+.. note::
+
+    Users working with GPUs on Windows machines, please see our :ref:`FAQ <general-faqs>` section regarding installation steps.
+
+1. If you've previously installed and used conda, it's recommended (but optional) to create a new virtual environment in order to avoid dependency conflicts::
 
     conda create -y -n empanada -c conda-forge python=3.9
 
@@ -82,15 +91,13 @@ If installation was successful you should see empanada-napari in the Plugins men
 
 If you still don't see it, try installing the plugin with pip::
 
-    pip install empanada-napari=1.1.0
+    pip install empanada-napari
 
-
-If you encounter an error during the installation process, check out the :ref:`FAQ <faqs>` section for useful tips to troubleshoot.
 
 .. _update-install:
 
-Existing User Installation
-==========================
+Existing User Version Update
+==============================
 
 To update to the newest version of empanada-napari, you must uninstall the older version.
 
@@ -98,16 +105,23 @@ If you installed napari into a virtual environment as suggested in the original 
 
     conda activate empanada
 
-From here, you will need to uninstall your current version of empanada-napari::
+From here, you will need to update your current version of empanada-napari::
 
-    pip uninstall empanada-napari
+    pip empanada-napari --upgrade
 
-Next you will need to install the latest version using pip::
+.. note::
 
-    pip install empanada-napari==1.1.0
+    You can also update to the current version by uninstalling empanada-napari::
+
+        pip uninstall empanada-napari
 
 
-Now you can launch napari with the newest version of empanada-napari::
+    Then you will need to install the latest version using pip::
+
+        pip install empanada-napari==1.1.1
+
+Now you can launch napari with the latest version of empanada-napari::
 
     napari
+
 

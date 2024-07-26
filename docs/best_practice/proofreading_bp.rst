@@ -50,7 +50,7 @@ Then place points where you would like the new centers to be and use the :ref:`S
 the **Use points as markers** option selected). After the labels have been accurately seperated, you can then *dilate* the labels
 using the **Morph Labels** module.
 
-.. image:: ../_static/morph-split-example.pmg
+.. image:: ../_static/morph-split-example.png
     :align: center
     :width: 100%
 

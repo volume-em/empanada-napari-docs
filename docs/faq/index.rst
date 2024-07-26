@@ -31,36 +31,44 @@ Sharing your model
 
 .. _general-faqs:
 
-General questions
-========================
+General questions and troubleshooting
+======================================
 
-.. dropdown:: Installation issues
+.. dropdown:: General installation issues
 
     If you encounter problems with installing empanada-napari, try restarting napari or installing the plugin using pip.
-    If you still face difficulties, consider creating a new virtual environment to avoid dependency conflicts
+    If you still face difficulties, consider creating a new virtual environment to avoid dependency conflicts.
 
 
-.. dropdown:: I got an "openMP/OMP related error" while working in empanada-napari.
+.. dropdown:: Installation steps to ensure efficient processing on GPU enabled Windows systems
 
-    If you get "openMP/OMP related error", try following these steps:
+    .. important::
 
-    #. Try uninstalling pyqt using conda::
+        If you have a Windows system with GPUs, it is critical to ensure that PyTorch is installed with compatible cuda libraries.
+        **See step 4**
 
-        conda uninstall -y pyqt
 
-    #. Install and upgrade napari using pip::
+    1. If you've previously installed and used conda, you will need to create a new virtual environment in order to avoid dependency conflicts::
 
-        pip install napari --upgrade
+        conda create -y -n empanada -c conda-forge python=3.9
+        conda activate empanada
 
-    #. Install pyqt using pip::
+    2. Install pyqt with conda::
 
-        pip install pyqt5
+        conda install pyqt
 
-    #. Open napari and try running the empanada-napari modules again.
+    3. Install napari with pip::
 
-    .. note::
+        pip install "napari[all]"
 
-        If this does not resolve the issue, contact us with the error log at nci-cmm@mail.nih.gov
+
+    4. Install pytorch using conda::
+
+        conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+
+    5. Install empanada-napari using pip::
+
+        pip install empanada-napari=1.1.1
 
 
 .. dropdown:: What are the hardware requirements to use empanada-napari?
@@ -76,15 +84,18 @@ General questions
 
     * **GPU Support:** Having a GPU installed on your system will significantly increase model throughput, although CPU optimized versions of all models are shipped with the plugin. The plugin relies on pytorch for running models, and GPU drivers must be correctly installed for GPU usage.
 
-    * **Memory:** Ensure sufficient memory to handle the processing requirements of deep learning-based image segmentation tasks. *32G should be sufficient.*
+    .. note::
 
-    * **Storage:** Adequate storage space to store datasets, models, and any intermediate results generated during inference or training. *256G should be sufficient.*
+        Windows users, please see above section regarding installations steps for systems with GPU.
+
+    * **Memory:** Ensure sufficient memory to handle the processing requirements of deep learning-based image segmentation tasks. 32G should be sufficient.
+
+    * **Storage:** Adequate storage space to store datasets, models, and any intermediate results generated during inference or training. 256G should be sufficient.
 
 .. dropdown:: Why are my denoised images giving me worse results?
 
-    MitoNet was trained on images from CEM1.5M that were denoised with histogram equalization, while techniques like noise2void
-    use a distinct denoising method. This variance in denoising techniques causes a significant shift in the characteristics
-    of the data, leading to subpar results when applying MitoNet to denoised images.
+    MitoNet was trained on images from CEM1.5M that were denoised with histogram equalization, while techniques like noise2void use a distinct denoising method.
+    This variance in denoising techniques causes a significant shift in the characteristics of the data, leading to subpar outcomes when applying MitoNet to denoised images.
 
 
 
@@ -176,7 +187,7 @@ Training and finetuning questions
         and :ref:`Training <train-best-practice>` best practices for more information.
 
 
-.. dropdown:: When training a new model, how do I determine the number of iterations?
+.. dropdown:: How do I determine the number of iterations needed to train a new model?
 
     When training a new model, determining the number of iterations involves a process of
     testing and optimization. Here are the steps to help you determine the appropriate number of iterations:
@@ -213,6 +224,31 @@ Training and finetuning questions
 
         Determining the number of iterations can vary depending on the complexity of the training data and the segmentation task. While the above steps can work as
         as a great starting point, it is recommended to try different configurations to determine the "sweet spot" for your model.
+
+
+.. dropdown:: How to determine a model's accuracy on your dataset?
+
+    To calculate a model's accuracy on your data follow the steps below:
+
+    1. Run an initial 2D or 3D inference on your dataset.
+
+    2. Next, use the :ref:`Pick finetune/training patches <pick-patches>` module to create patches/flipbooks.
+
+    3. Save the initial output from the model using the :ref:`Save finetune/training patches <save-patches>` module.
+
+    4. After saving the unedited patches, now apply any proofreading/corrections needed.
+
+    .. hint::
+
+        Keep in mind for 3D images, the patches are output as flipbooks (short stacks of 5 images). Only the middle (or third image)
+        in each flipbook should be annotated (or in this case proofread), the other images are there to provide some 3D context. At the bottom of the
+        viewer you'll see that there are two sliders. The top one scrolls through the stack of images and the bottom one
+        scrolls through the flipbooks. Make sure all edits to annotations are made on slice "2" of the top slider.
+
+    5. Once all the corrections have been made, use the :ref:`Save finetune/training patches <save-patches>` module again to save the corrected patches.
+
+    6. Now that you have the initial and corrected segmentations saved, calculate the IoU (intersection-over-union) and/or F1 scores.
+
 
 
 .. dropdown:: How do I remove a model?

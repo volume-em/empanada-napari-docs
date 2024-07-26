@@ -3,7 +3,7 @@
 Get model info
 ------------------
 
-.. image:: ../_static/get-info-updated.png
+.. image:: ../_static/get_info.png
   :align: center
   :width: 500px
   :alt: Dialog for the get info module.

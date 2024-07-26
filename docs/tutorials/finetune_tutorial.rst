@@ -138,7 +138,7 @@ through the stack and place a total of 16 points. Now, we'll use the Pick finetu
 The patches are output as flipbooks (short stacks of 5 images). Only the middle (third image)
 in each flipbook should be annotated (or in this case proofread), the other images are there to provide some 3D context. At the bottom of the
 viewer you'll see that there are two sliders. The top one scrolls through the stack of images and the bottom one
-scrolls through the flipbooks. Make sure all edits to annotations are made on slice "2" of the top slider (middle right panel).
+scrolls through the flipbooks. Make sure all edits to annotations are made on slice "2" of the top slider (bottom right panel).
 
 Proofreading training data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -151,7 +151,7 @@ Remember that only the middle image will need to be edited!
 
 
 Once you have finished making corrections, use the :ref:`Save finetune/training patches <save-patches>` module to save
-the flipbook images and their corresponding labels layer (middle right panel).
+the flipbook images and their corresponding labels layer (right middle panel).
 
 
 Finetuning the model

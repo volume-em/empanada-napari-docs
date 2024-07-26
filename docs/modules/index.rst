@@ -1,8 +1,16 @@
 .. _modules:
+.. raw:: html
 
-Empanada-napari modules
+   <style type="text/css">
+        h1 {display: none;}
+   </style>
+
+empanada-napari modules
 -----------------------
 
+.. important::
+
+    **empanada-napari version 1.1.1 is now available!** This latest version has minor bug fixes regarding the Filter Labels and Count Labels modules.
 
 .. _new-features:
 
@@ -10,8 +18,8 @@ Empanada-napari modules
 New and updated modules
 ========================
 
-.. grid:: 3
-    :gutter: 4 4 5 5
+.. grid:: 2
+    :gutter: 2 2 4 4
     :padding: 2 2 0 0
 
     .. grid-item-card:: Export Segmentations
@@ -130,7 +138,7 @@ Inference modules
 
 
 .. grid:: 2
-    :gutter: 3 3 4 5
+    :gutter: 2 2 4 4
     :padding: 2 2 0 0
 
     .. grid-item-card:: 2D Inference (Parameter testing)
@@ -171,8 +179,8 @@ Inference modules
 Finetune and training  modules
 =================================
 
-.. grid:: 3
-    :gutter: 3 3 4 5
+.. grid:: 2
+    :gutter: 2 2 4 4
     :padding: 2 2 0 0
 
 
@@ -280,7 +288,7 @@ Finetune and training  modules
 Proofreading modules
 =================================
 
-.. grid:: 4
+.. grid:: 2
     :gutter: 2 2 4 4
     :padding: 2 2 0 0
 
@@ -384,6 +392,5 @@ Proofreading modules
     Filter Labels <../modules/_filter>
     Jump to Label <../modules/_jump>
     Find Next Available Label <../modules/_find_next>
-
 
 
