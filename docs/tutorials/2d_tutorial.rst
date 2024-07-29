@@ -130,7 +130,7 @@ yellow and purple labels, click the **Merge labels** button. Make sure that the 
 the layer you're working on (see panel **b** in the previous figure), if not you'll get an "out-of-bounds"
 error. Also, always leave the Apply 3D button unchecked when proofreading in 2D.
 
-This overmerges the two instances. To split them, place a single point anywhere on the yellow label and
+This overmerges the two instances. To split them, place a single point anywhere on the green label and
 click the **Split labels** button (again making sure the labels layer selected is correct). The **Minimum distance** parameter
 applies watershed to determine new instances, and **Minimum distance** slider will control how many fragments the label gets split into.
 

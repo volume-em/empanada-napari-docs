@@ -38,6 +38,7 @@ html_theme = 'pydata_sphinx_theme'
 html_theme_options = {
 	"primary_sidebar_end": ["indices.html", "sidebar-ethical-ads.html"],
 	"show_nav_level": 0,
+	"announcement": "empanada-napari v1.1.1 is now available! Check out how to update <a href='https://empanada-napari.readthedocs.io/en/latest/getting_started/install.html'>here!</a>",
 }
 html_logo = '_static/empanada_logo_icon.png'
 html_favicon = '_static/favicon.ico'
