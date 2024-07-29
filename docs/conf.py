@@ -36,7 +36,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 html_theme = 'pydata_sphinx_theme'
 html_theme_options = {
-	"primary_sidebar_end": ["indices.html", "sidebar-ethical-ads.html"],
+	"primary_sidebar_end": ["custom-announcement-banner.html", "indices.html", "sidebar-ethical-ads.html"],
 	"show_nav_level": 0,
 	"announcement": "https://github.com/volume-em/empanada-napari-docs/raw/main/docs/_templates/custom-announcement-banner.html",
 }
