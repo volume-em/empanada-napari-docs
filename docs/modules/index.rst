@@ -11,6 +11,7 @@ empanada-napari modules
 .. important::
 
     **empanada-napari version 1.1.1 is now available!** This latest version has minor bug fixes regarding the Filter Labels and Count Labels modules.
+    Check out how to update to the latest version :ref:`here! <update-install>`
 
 .. _new-features:
 
