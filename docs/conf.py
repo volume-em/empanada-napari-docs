@@ -9,7 +9,7 @@
 project = 'empanada-napari-v1.1.1'
 copyright = '2024, Madeline Barry and Ryan Conrad'
 author = 'Madeline Barry'
-release = '0.1'
+release = '0.1.1'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
