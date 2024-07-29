@@ -24,7 +24,7 @@ extensions = [
 	"sphinx_design",
 ]
 
-templates_path = ['_templates']
+templates_path = ["_templates"]
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
@@ -38,7 +38,7 @@ html_theme = 'pydata_sphinx_theme'
 html_theme_options = {
 	"primary_sidebar_end": ["indices.html", "sidebar-ethical-ads.html"],
 	"show_nav_level": 0,
-	"announcement": "empanada-napari v1.1.1 is now available! Check out how to update <a href='https://empanada-napari.readthedocs.io/en/latest/getting_started/install.html'>here!</a>",
+	"announcement": "https://github.com/volume-em/empanada-napari-docs/raw/main/docs/_templates/custom-announcement-banner.html",
 }
 html_logo = '_static/empanada_logo_icon.png'
 html_favicon = '_static/favicon.ico'
