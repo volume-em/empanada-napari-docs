@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'empanada-napari-v1.1.0'
+project = 'empanada-napari-v1.1.1'
 copyright = '2024, Madeline Barry and Ryan Conrad'
 author = 'Madeline Barry'
 release = '0.1'
