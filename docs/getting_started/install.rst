@@ -107,7 +107,7 @@ If you installed napari into a virtual environment as suggested in the original 
 
 From here, you will need to update your current version of empanada-napari::
 
-    pip empanada-napari --upgrade
+    pip install empanada-napari --upgrade
 
 .. note::
 
