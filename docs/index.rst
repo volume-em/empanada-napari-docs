@@ -81,13 +81,26 @@ empanada-napari
 
 .. important::
 
-   empanada-napari version 1.1.1 is now available! This latest version has minor bug fixes regarding the **Filter Labels** and **Count Labels** modules.
+   empanada-napari version 1.2 is now available! This latest version has new models for nuclei and lipid doplets, new plugins and updated 2D and 3D inference modules.
    We have also frozen the numba (0.59.0) and napari (0.4.18) versions to avoid dependency conflicts.
    Check out how to update to the latest version :ref:`here! <update-install>`
 
 .. note::
 
    Windows users who are working with GPUs, please see an important note about installation steps in our :ref:`FAQ section <general-faqs>`.
+
+Suggested Workflow
+-----------------
+
+.. image:: _static/suggested_empanada_pipeline.png
+    :width: 1200px
+    :align: center
+    :alt: Suggested workflow diagram for empanada-napari
+
+.. grid:: 4
+    :gutter: 2 2 4 4
+    :padding: 4 4 0 0
+
 
 
 Citing this work
@@ -126,7 +139,7 @@ Citing this work
 
 
 
-This version of empanada-napari was created by Abhishek Bhardwaj and Madeline Barry `<https://cmm.ccr.cancer.gov/volume-em/>`_ :octicon:`link-external`
+This version of empanada-napari was created by Abhishek Bhardwaj `<https://cmm.ccr.cancer.gov/volume-em/>`_ :octicon:`link-external`
 
 
 

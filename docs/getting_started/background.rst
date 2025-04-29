@@ -24,6 +24,38 @@ optimized to handle the complex shapes of mitochondria in EM images. The modelâ€
 challenging volume EM benchmarks to test its ability for accurate and precise segmentations. (Check out the
 full paper linked below)
 
+NucleoNet
+========
+
+.. image:: ../_static/nucleonet.png
+    :width: 400px
+    :align: center
+
+NucleoNet is a pre-trained deep learning model specifically designed for the accurate and efficient segmentation of
+nuclei in volume electron microscopy (vEM) images. Integrated within the user-friendly empanada plugin for napari,
+NucleoNet leverages convolutional neural networks (CNNs) and has been trained on large, diverse, and carefully
+annotated datasets.
+
+This allows researchers to bypass the need for extensive manual annotation and significant computational resources when
+segmenting nuclei in their vEM data. By providing a robust and readily available solution, NucleoNet streamlines
+the analysis of nuclear structures, facilitating high-throughput and precise investigations in cell biology.
+
+DropNet
+========
+
+.. image:: ../_static/dropnet.png
+    :width: 400px
+    :align: center
+
+DropNet is a pre-trained deep learning model included in the empanada plugin, specifically designed for the segmentation
+of lipid droplets within volume electron microscopy (vEM) images. Utilizing convolutional neural networks (CNNs),
+DropNet has been trained on extensive and meticulously curated datasets of lipid droplets. This integration within
+empanada offers researchers a readily accessible and powerful tool to automate the segmentation of these crucial
+cellular components, reducing the burden of manual analysis and enabling more efficient and detailed studies of lipid
+metabolism and cellular organization.
+
+Overall
+========
 
 These models accept a grayscale EM image and output a semantic segmentation, up-down and right-left offsets, and a
 heatmap with peaks at object centers. After postprocessing, a panoptic (or in the case below, instance) segmentation

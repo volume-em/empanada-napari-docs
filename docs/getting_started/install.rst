@@ -8,7 +8,7 @@ first attempt, if that happens please reach out to the napari developers directl
 
 .. important::
 
-    **empanada-napari version 1.1.1 is now available!** This latest version has minor bug fixes regarding the Filter Labels and Count Labels modules.
+    **empanada-napari version 1.2 is now available!** This latest version has new models for nuclei and lipid doplets, new plugins and updated 2D and 3D inference modules.
     We have also frozen the numba (0.59.0) and napari (0.4.18) versions to avoid dependency conflicts.
 
 
@@ -118,7 +118,7 @@ From here, you will need to update your current version of empanada-napari::
 
     Then you will need to install the latest version using pip::
 
-        pip install empanada-napari==1.1.1
+        pip install empanada-napari==1.2
 
 Now you can launch napari with the latest version of empanada-napari::
 

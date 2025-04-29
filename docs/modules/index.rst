@@ -10,125 +10,8 @@ empanada-napari modules
 
 .. important::
 
-    **empanada-napari version 1.1.1 is now available!** This latest version has minor bug fixes regarding the Filter Labels and Count Labels modules.
+    **empanada-napari version 1.2 is now available!** This latest version has new models for nuclei and lipid doplets, new plugins and updated 2D and 3D inference modules.
     Check out how to update to the latest version :ref:`here! <update-install>`
-
-.. _new-features:
-
-========================
-New and updated modules
-========================
-
-.. grid:: 2
-    :gutter: 2 2 4 4
-    :padding: 2 2 0 0
-
-    .. grid-item-card:: Export Segmentations
-        :shadow: md
-
-        Exports 2D stack segmentations or a single 3D volume label mask.
-
-        +++
-        .. button-ref:: export-seg
-            :ref-type: ref
-            :click-parent:
-            :color: primary
-            :expand:
-
-            Export Segmentations
-
-
-    .. grid-item-card:: Morph Labels
-        :shadow: md
-
-        Applies morphological operations to specific labels or to the entire label layer.
-
-        +++
-
-        .. button-ref:: morph-labels
-            :ref-type: ref
-            :click-parent:
-            :color: primary
-            :expand:
-
-            Morph Labels
-
-
-    .. grid-item-card:: Count Labels
-        :shadow: md
-
-        Counts the number of label IDs in the dataset and export the list of label IDs in an Excel workbook.
-
-        +++
-
-        .. button-ref:: count-labels
-            :ref-type: ref
-            :click-parent:
-            :color: primary
-            :expand:
-
-            Count Labels
-
-    .. grid-item-card:: Filter Labels
-        :shadow: md
-
-        Removes small pixel/voxel valued labels from the label mask and/or labels touching the border of the image.
-
-        +++
-
-        .. button-ref:: filter-labels
-            :ref-type: ref
-            :click-parent:
-            :color: primary
-            :expand:
-
-            Filter Labels
-
-    .. grid-item-card:: Split Labels
-        :shadow: md
-
-        Allows the placement of multiple markers for distance watershed-based instance splitting.
-
-        +++
-
-        .. button-ref:: split-labels
-            :ref-type: ref
-            :click-parent:
-            :color: primary
-            :expand:
-
-            Split Labels
-
-    .. grid-item-card:: Export a model
-        :shadow: md
-
-        Locally exports an empanada model. Useful for
-        sharing models locally or over the internet.
-
-        +++
-
-        .. button-ref:: export-model
-            :ref-type: ref
-            :click-parent:
-            :color: primary
-            :expand:
-
-            Export a Model
-
-    .. grid-item-card:: Import a model
-        :shadow: md
-
-        Makes a new model accessible in all other training and inference modules.
-
-        +++
-
-        .. button-ref:: import-model
-            :ref-type: ref
-            :click-parent:
-            :color: primary
-            :expand:
-
-            Import a Model
 
 
 .. _inference-modules:
@@ -142,7 +25,7 @@ Inference modules
     :gutter: 2 2 4 4
     :padding: 2 2 0 0
 
-    .. grid-item-card:: 2D Inference (Parameter testing)
+    .. grid-item-card:: [UPDATED] 2D Inference (Parameter testing)
         :shadow: md
 
         Runs model inference on 2D images. Supports batch mode for
@@ -159,7 +42,7 @@ Inference modules
             2D Inference (Parameter Testing)
 
 
-    .. grid-item-card:: 3D Inference
+    .. grid-item-card:: [UPDATED] 3D Inference
         :shadow: md
 
         Implements stack and ortho-plane inference functionality for volumetric datasets.
@@ -173,6 +56,20 @@ Inference modules
             :expand:
 
             3D Inference
+
+    .. grid-item-card:: Export Segmentations
+        :shadow: md
+
+        Exports 2D stack segmentations or a single 3D volume label mask.
+
+        +++
+        .. button-ref:: export-seg
+            :ref-type: ref
+            :click-parent:
+            :color: primary
+            :expand:
+
+            Export Segmentations
 
 .. _finetune-train-mods:
 
@@ -283,6 +180,51 @@ Finetune and training  modules
 
             Get Model Info
 
+    .. grid-item-card:: Export a model
+        :shadow: md
+
+        Locally exports an empanada model. Useful for
+        sharing models locally or over the internet.
+
+        +++
+
+        .. button-ref:: export-model
+            :ref-type: ref
+            :click-parent:
+            :color: primary
+            :expand:
+
+            Export a Model
+
+    .. grid-item-card:: Import a model
+        :shadow: md
+
+        Makes a new model accessible in all other training and inference modules.
+
+        +++
+
+        .. button-ref:: import-model
+            :ref-type: ref
+            :click-parent:
+            :color: primary
+            :expand:
+
+            Import a Model
+
+    .. grid-item-card:: [NEW] Archive Model
+        :shadow: md
+
+        Archives a model into a hidden directory removing it from models menu
+
+        +++
+        .. button-ref:: archive-model
+            :ref-type: ref
+            :click-parent:
+            :color: primary
+            :expand:
+
+            Archive Model
+
 .. _proofreading-tools:
 
 =================================
@@ -354,6 +296,96 @@ Proofreading modules
 
             Find Next Label
 
+    .. grid-item-card:: Morph Labels
+        :shadow: md
+
+        Applies morphological operations to specific labels or to the entire label layer.
+
+        +++
+
+        .. button-ref:: morph-labels
+            :ref-type: ref
+            :click-parent:
+            :color: primary
+            :expand:
+
+            Morph Labels
+
+
+    .. grid-item-card:: Count Labels
+        :shadow: md
+
+        Counts the number of label IDs in the dataset and export the list of label IDs in an Excel workbook.
+
+        +++
+
+        .. button-ref:: count-labels
+            :ref-type: ref
+            :click-parent:
+            :color: primary
+            :expand:
+
+            Count Labels
+
+    .. grid-item-card:: Filter Labels
+        :shadow: md
+
+        Removes small pixel/voxel valued labels from the label mask and/or labels touching the border of the image.
+
+        +++
+
+        .. button-ref:: filter-labels
+            :ref-type: ref
+            :click-parent:
+            :color: primary
+            :expand:
+
+            Filter Labels
+
+    .. grid-item-card:: Split Labels
+        :shadow: md
+
+        Allows the placement of multiple markers for distance watershed-based instance splitting.
+
+        +++
+
+        .. button-ref:: split-labels
+            :ref-type: ref
+            :click-parent:
+            :color: primary
+            :expand:
+
+            Split Labels
+
+    .. grid-item-card:: [NEW] Create Tiles
+        :shadow: md
+
+        Chop big images (with/without corresponding masks) to square tiles of given size
+
+        +++
+        .. button-ref:: create-tiles
+            :ref-type: ref
+            :click-parent:
+            :color: primary
+            :expand:
+
+            Create Tiles
+
+    .. grid-item-card:: [NEW] Merge Tiles
+        :shadow: md
+
+        Merge square tiles back created by Create Tiles module
+
+        +++
+        .. button-ref:: merge-tiles
+            :ref-type: ref
+            :click-parent:
+            :color: primary
+            :expand:
+
+            Merge Tiles
+
+
 
 
 
@@ -378,7 +410,7 @@ Proofreading modules
     Get model info <../modules/_get_info>
     Export a model <../modules/_export>
     Import a model <../modules/_import>
-
+    Archive a model <../modules/_archive-model>
 
 
 .. toctree::
@@ -393,5 +425,7 @@ Proofreading modules
     Filter Labels <../modules/_filter>
     Jump to Label <../modules/_jump>
     Find Next Available Label <../modules/_find_next>
+    Create Tiles <../modules/_create-tiles>
+    Merge Tiles <../modules/_merge-tiles>
 
 

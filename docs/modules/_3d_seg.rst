@@ -71,6 +71,12 @@ of the classes being segmented by the model within a volume.
 Ortho-plane Parameters (Optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+**Erode Labels:** After running the model on the xy, xz, and yz dimensions, will erode the objects in the label map by the number of pixels selected before the final object consensus. Should help differentiate objects that are separate from one another but close.
+
+**Dilate Labels:** After running the model on the xy, xz, and yz dimensions, will expand or thicken the objects in the label map by the number of pixels selected before the final object consensus.
+
+**Fill holes in segmentation:** If checked will fill holes in the segmentation label map.
+
 **Run ortho-plane:** Whether to run ortho-plane inference. If unchecked, inference
 will only be run on slices from the Inference plane chosen above.
 
@@ -100,6 +106,10 @@ Output
 
 Returns a 3D labels layer in the napari viewer for each segmentation class and,
 optionally, panoptic segmentation stacks.
+
+.. note::
+
+   With the new models (NucleoNet and DropNet) a connection with the internet is required for their first use.
 
 
 Demo

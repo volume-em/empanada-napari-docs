@@ -6,10 +6,10 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'empanada-napari-v1.1.1'
-copyright = '2024, Madeline Barry and Ryan Conrad'
-author = 'Madeline Barry'
-release = '0.1.1'
+project = 'empanada-napari-v1.2'
+copyright = '2025, Abhishek Bhardwaj, Madeline Barry and Ryan Conrad'
+author = 'Abhishek Bhardwaj'
+release = '1.2'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -38,7 +38,7 @@ html_theme = 'pydata_sphinx_theme'
 html_theme_options = {
 	"primary_sidebar_end": ["indices.html", "sidebar-ethical-ads.html"],
 	"show_nav_level": 0,
-	"announcement": "empanada-napari v1.1.1 is now available! Check out how to update <a href='https://empanada.readthedocs.io/en/latest/getting_started/install.html'>here!</a>",
+	"announcement": "empanada-napari v1.2 is now available! New models are now available for nuclei and lipid droplets. Check out how to update <a href='getting_started/install.html'>here!</a>",
 }
 html_logo = '_static/empanada_logo_icon.png'
 html_favicon = '_static/favicon.ico'

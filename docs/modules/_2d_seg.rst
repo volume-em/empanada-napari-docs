@@ -32,6 +32,8 @@ more GPU/CPU memory during postprocessing.
 **Semantic Only:** Whether to skip panoptic postprocessing and return only a semantic
 segmentation.
 
+**Fill holes in segmentation:** If checked will fill holes in the segmentation label map.
+
 **Max objects per class:** The maximum number of objects that are allowed for any one
 of the classes being segmented by the model.
 
@@ -57,6 +59,8 @@ they are not supported by Apple Silicon.
 currently visible in the Napari viewing window. This makes it possible to navigate large images and selectively
 test model performance within a 2D ROI. This option will return an error if run on xz slices of a 3D image.
 
+**Confine to ROI:** ROIs can be created using a Shapes layer in Napari. When 2D inference is run it will only be performed on the areas within the drawn using the Shapes layer.
+
 **Output to layer:** If checked, the output of the model will be inserted into the given
 output layer (next argument). This argument is incompatible with Batch mode and will raise
 an error if both are checked.
@@ -72,6 +76,10 @@ Output
 
 Returns a 2D labels layer in the napari viewer or inserts a predicted
 segmentation into a selected labels layer.
+
+.. note::
+
+   With the new models (NucleoNet and DropNet) a connection with the internet is required for their first use.
 
 
 Demo

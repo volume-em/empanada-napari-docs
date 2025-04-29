@@ -68,7 +68,7 @@ General questions and troubleshooting
 
     5. Install empanada-napari using pip::
 
-        pip install empanada-napari=1.1.1
+        pip install empanada-napari=1.2
 
 
 .. dropdown:: What are the hardware requirements to use empanada-napari?
