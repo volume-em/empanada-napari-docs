@@ -14,7 +14,7 @@ Parameters
 
 **image layer:** The napari image layer on which to run model inference.
 
-**Model:** Model to use for inference. Default options are MitoNet_v1 and MitoNet_v1_mini.
+**Model:** Model to use for inference. Default options are MitoNet_v1, MitoNet_v1_mini, NucleoNet_base_v1 and DropNet_base_v1.
 
 **Image Downsampling:** Downsampling factor to apply to the input image before running
 model inference. The returned segmentation will be interpolated to the original

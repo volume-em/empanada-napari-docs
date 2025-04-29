@@ -14,7 +14,7 @@ General Parameters
 
 **image layer:** The napari image layer on which to run model inference.
 
-**model:** Model to use for inference.
+**model:** Model to use for inference. Default options are MitoNet_v1, MitoNet_v1_mini, NucleoNet_base_v1 and DropNet_base_v1
 
 **Use GPU:** Whether to use system GPU for running inference. The box will be
 check by default if a GPU is found on your system. If no GPU is detected, then
