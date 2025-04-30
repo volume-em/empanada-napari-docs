@@ -8,10 +8,8 @@
 empanada-napari modules
 -----------------------
 
-.. important::
-
-    **empanada-napari version 1.2 is now available!** This latest version has new models for nuclei and lipid doplets, new plugins and updated 2D and 3D inference modules.
-    Check out how to update to the latest version :ref:`here! <update-install>`
+.. note::
+    "Run Quantized Model" is only supported for devices running on Intel Chips.
 
 
 .. _inference-modules:

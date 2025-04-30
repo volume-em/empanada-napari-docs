@@ -3,6 +3,9 @@
 Tutorials
 --------------
 
+.. note::
+    "Run Quantized Model" is only supported for devices running on Intel Chips.
+
 .. grid:: 2
     :gutter: 3 3 4 5
     :padding: 2 2 0 0
