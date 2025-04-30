@@ -16,6 +16,12 @@ first attempt, if that happens please reach out to the napari developers directl
 
   **Only Python 3.7, 3.8, 3.9 are supported, 3.10 and later are not.**
 
+    Please install git, gcc and g++ compilers before proceeding with installation.
+
+    1. Mac users please read `this <https://mac.install.guide/commandlinetools/4>`_.
+
+    2. Windows users please read `this <https://code.visualstudio.com/docs/cpp/config-mingw#_installing-the-mingww64-toolchain>`_.
+
 
 Conda Installation
 ===================
@@ -91,7 +97,7 @@ If installation was successful you should see empanada-napari in the Plugins men
 
 If you still don't see it, try installing the plugin with pip::
 
-    pip install empanada-napari
+    pip install empanada-napari --upgrade
 
 
 .. _update-install:

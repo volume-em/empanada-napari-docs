@@ -59,7 +59,7 @@ they are not supported by Apple Silicon.
 currently visible in the Napari viewing window. This makes it possible to navigate large images and selectively
 test model performance within a 2D ROI. This option will return an error if run on xz slices of a 3D image.
 
-**Confine to ROI:** ROIs can be created using a Shapes layer in Napari. When 2D inference is run it will only be performed on the areas within the drawn using the Shapes layer.
+**Confine to ROI:** ROIs can be created using a Shapes layer in Napari. When 2D inference is run it will only be performed on the areas within the drawn ROI.
 
 **Output to layer:** If checked, the output of the model will be inserted into the given
 output layer (next argument). This argument is incompatible with Batch mode and will raise

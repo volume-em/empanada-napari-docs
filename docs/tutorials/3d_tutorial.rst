@@ -3,7 +3,7 @@
 Inference on volumetric data
 ------------------------------
 
-To get started, `download an example HeLa cell FIBSEM dataset <https://www.dropbox.com/s/2gu3go2puzc47ip/hela_cell_em.tif?dl=0>`_.
+To get started, `download an example HeLa cell FIBSEM dataset <https://zenodo.org/records/15311513/files/hela_cell_em.tif?download=1>`_.
 
 If you installed napari into a virtual environment as suggested in :ref:`Installation <installation>`, be sure to activate it::
 

@@ -3,7 +3,7 @@
 Inference on 2D images
 -----------------------
 
-To get started, `download some example TEM images <https://www.dropbox.com/s/t9z8v2j06ttlhng/empanada_tem.zip?dl=0>`_.
+To get started, `download an example TEM image <https://zenodo.org/records/15311513/files/nanotomy_islet_rat375_crop1.tif?download=1>`_. (from nanotomy.org)
 
 If you installed napari into a virtual environment as suggested in :ref:`Installation <installation>`, be sure to activate it::
 
