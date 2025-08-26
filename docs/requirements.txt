@@ -2,5 +2,5 @@ sphinx
 sphinx-autobuild
 pydata-sphinx-theme
 sphinx-copybutton
-sphinx_design
+sphinx-design
 sphinxcontrib-video
