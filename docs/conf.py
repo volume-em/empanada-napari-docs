@@ -21,7 +21,6 @@ extensions = [
 	'sphinx.ext.autosummary',
 	'sphinx.ext.autosectionlabel',
 	"sphinx_copybutton",
-    "sphinxcontrib.video",
     "sphinx_design",
 ]
 

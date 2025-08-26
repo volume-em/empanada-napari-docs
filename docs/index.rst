@@ -79,10 +79,7 @@ empanada-napari
 
             Share your model
 
-.. video:: _static/empanada_nucleonet_dropnet_movie.mov
-    :width: 1000px
-    :height: 500px
-    :align: center
+
 
 .. important::
 
