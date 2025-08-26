@@ -79,6 +79,11 @@ empanada-napari
 
             Share your model
 
+.. video:: _static/empanada_nucleonet_dropnet_movie.mov
+    :width: 1000px
+    :height: 500px
+    :align: center
+
 .. important::
 
    empanada-napari version 1.2 is now available! This latest version has new models for nuclei and lipid droplets, new plugins and updated 2D and 3D inference modules.

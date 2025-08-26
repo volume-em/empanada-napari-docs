@@ -3,3 +3,4 @@ sphinx-autobuild
 pydata-sphinx-theme
 sphinx-copybutton
 sphinx_design
+sphinxcontrib-video

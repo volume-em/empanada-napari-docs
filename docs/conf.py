@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'empanada-napari-v1.2'
-copyright = '2025, Abhishek Bhardwaj, Madeline Barry and Ryan Conrad'
+copyright = '2025, Abhishek Bhardwaj, Ryan Conrad, Madeline Barry and Kedar Narayan'
 author = 'Abhishek Bhardwaj'
 release = '1.2'
 
@@ -22,6 +22,7 @@ extensions = [
 	'sphinx.ext.autosectionlabel',
 	"sphinx_copybutton",
 	"sphinx_design",
+    "sphinxcontrib.video"
 ]
 
 templates_path = ["_templates"]
