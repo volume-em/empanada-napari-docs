@@ -11,23 +11,6 @@ results.
     If you find that you still have unanswered questions, please reach out to us at nci-cmm@mail.nih.gov !
 
 
-.. _share-model:
-
-Sharing your model
-===================
-
-
-.. dropdown:: Where do I go to upload my model?
-
-    Now that you have finished training and finetuning your model, you can share it with the vEM community by visiting
-    `Zenodo <https://zenodo.org/>`_. Once you have uploaded your model, let us know by filling out this form:
-
-    .. raw:: html
-
-        <iframe width="700px" height="480px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=eHW3FHOX1UKFByUcotwrBioZ0-7xQKRDjr-VF_wnLMJUNFdNRDVMT08wWVFBTFRHWktGWDRRMU4xQi4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
-
-
-
 
 .. _general-faqs:
 
@@ -38,6 +21,28 @@ General questions and troubleshooting
 
     If you encounter problems with installing empanada-napari, try restarting napari or installing the plugin using pip.
     If you still face difficulties, consider creating a new virtual environment to avoid dependency conflicts.
+
+.. dropdown:: I downloaded empanada and I’m running a model for the first time. Why is it not working?
+
+    The first time you choose a model to run inference, empanada has to download the model weights and config from zenodo. 
+    Make sure you’re connected to the internet and that you don’t have extra SSL certificate requirements (sometimes imposed by institutional IT - go to Guest wifi!). 
+    Check terminal, most likely it’s a slow download.
+
+.. dropdown:: Why is module X (e.g. remove boundaries) taking so long?
+
+    If you are trying to run empanada on your laptop on a massive image, it will be slow because of resource limitations. 
+    It is possible to run empanada on HPC resources, but you will need local IT and compute help for this, 
+    see https://github.com/volume-em/empanada-napari 
+    Some libraries are just not very efficient; for example,  remove boundaries will take a long time in 2D and 3D. 
+    This is not an empanada issue, but in the future we will try to get more efficient solutions. 
+    Until then, aren’t there emails to check and coffee to drink…? :)
+
+
+.. dropdown:: Why can’t I undo? Or change panel width (and other UI annoyances)?
+
+    Empanada piggybacks on napari; undo is not possible now for a variety of reasons that are not in our control. 
+    Also for the GUI, issues have to wait for upgrades from napari. We will do our best to keep up to date, 
+    while also limiting the number of versions we push out.
 
 
 .. dropdown:: Installation steps to ensure efficient processing on GPU enabled Windows systems
@@ -276,5 +281,18 @@ Training and finetuning questions
 
 
 
+.. _share-model:
 
+Sharing your model
+===================
+
+
+.. dropdown:: Where do I go to upload my model?
+
+    Now that you have finished training and finetuning your model, you can share it with the vEM community by visiting
+    `Zenodo <https://zenodo.org/>`_. Once you have uploaded your model, let us know by filling out this form:
+
+    .. raw:: html
+
+        <iframe width="700px" height="480px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=eHW3FHOX1UKFByUcotwrBioZ0-7xQKRDjr-VF_wnLMJUNFdNRDVMT08wWVFBTFRHWktGWDRRMU4xQi4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
 

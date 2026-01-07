@@ -25,10 +25,9 @@ make the model faster on your system's hardware.
   faster on GPU than they can be processed on CPU). There can be a long delay between
   inference and backward matching as the CPU processes work to catch up.
 
-We've found that models can give considerably different results based on the nanometer
-resolution of the input image and model inference is faster for smaller input images.
-Ideally you'll want to find and use the biggest **Image Downsampling** factor that still gives
-satisfactory results (see example below).
+We’ve found that models can give considerably different results based on the resolution of the input image. 
+Our models work best at 15-40 nm pixel sampling, and model inference is faster for smaller input images, 
+so you’ll want to use the biggest **Image Downsampling** factor that still gives satisfactory results (see example below).
 
 .. dropdown:: Downsampling example:
 
@@ -46,9 +45,9 @@ satisfactory results (see example below).
         in particular.
 
 
-Tweaking the **Segmentation Confidence Threshold** is often just a proxy for erosion and dilation of labels.
-Because ortho-plane inference averages segmentations from 3 views, using a lower confidence
-threshold is sometimes beneficial: try 0.3 instead of 0.5.
+Tweaking the **Segmentation Confidence Threshold** will change how many false positives (FPs) and false negatives (FNs) you get; for MitoNet, 
+we often see that 0.5 or 0.4 works well, whereas for NucleoNet, 0.6 gives better results. but for a well-tuned model, often works as a proxy for erosion and dilation of labels. 
+Because ortho-plane inference averages segmentations from 3 views, using a lower confidence threshold is sometimes beneficial: try 0.3 instead of 0.5.
 
 The **Center Confidence Threshold** and **Centers Minimum Distance** parameters both control how "split up"
 instances will be in 2D. Raising the confidence threshold will result in fewer object centers
@@ -56,6 +55,13 @@ and therefore fewer instances in the segmentation. Increasing the minimum distan
 will filter out centers that are too close together. This can help if long objects are being over-split. If you notice
 that the borders between instances are too "blocky", selecting the **Fine boundaries** option may be useful.
 However, this comes at the cost of 4x more memory usage during postprocessing, so use it wisely!
+
+Try checking the **Restrict to Viewfinder** box to check some of these parameters quickly - inference will only run on whatever patch is visible in the main window. 
+
+.. note::
+  
+    napari is bad about retaining xy coordinates, so while your original inference will be correctly overlaid over the grayscale image, any other processing (filter labels, morph labels etc) 
+    will result in the viewfinder patch segmentation displayed at top left of original image.
 
 The **Max objects per class** can also be thought of as the label divisor. That means, when the model used to run inference has a label divisor
 of *None*, simply put 0 in this box. This will start the label IDs at 1 (see note). To determine label divisor used by the model, open the

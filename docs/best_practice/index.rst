@@ -3,7 +3,11 @@
 Best Practices
 --------------
 
+.. important::
 
+    **Always keep an eye on your terminal window!**
+
+    This is where progress for some processes (tiling, inference etc) is visible, and results for some modules (count labels, delete labels etc) are printed out.
 
 
 .. toctree::
