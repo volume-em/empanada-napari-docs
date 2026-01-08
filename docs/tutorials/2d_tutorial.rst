@@ -5,6 +5,8 @@ Inference on 2D images
 
 To get started, `download an example TEM image <https://zenodo.org/records/15319873/files/nanotomy_islet_rat375_crop1.tif?download=1>`_. (from nanotomy.org)
 
+You may also wish to download a larger file, a stitched mosaic of tiled array tomography images (`download from zenodo <https://zenodo.org/records/18187789/files/ArrayTomography_Emboli_empanada_tutorial.tiff?download=1>`_)
+
 If you installed napari into a virtual environment as suggested in :ref:`Installation <installation>`, be sure to activate it::
 
     conda activate empanada
