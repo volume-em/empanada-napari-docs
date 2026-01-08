@@ -34,8 +34,7 @@ General questions and troubleshooting
     It is possible to run empanada on HPC resources, but you will need local IT and compute help for this, 
     see https://github.com/volume-em/empanada-napari 
     Some libraries are just not very efficient; for example,  remove boundaries will take a long time in 2D and 3D. 
-    This is not an empanada issue, but in the future we will try to get more efficient solutions. 
-    Until then, aren’t there emails to check and coffee to drink…? :)
+    This is not an empanada issue, but in the future we will try to get more efficient solutions.
 
 
 .. dropdown:: Why can’t I undo? Or change panel width (and other UI annoyances)?
