@@ -124,7 +124,7 @@ From here, you will need to update your current version of empanada-napari::
 
     Then you will need to install the latest version using pip::
 
-        pip install empanada-napari==1.2
+        pip install empanada-napari==1.2.1
 
 Now you can launch napari with the latest version of empanada-napari::
 
