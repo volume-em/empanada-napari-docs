@@ -52,3 +52,7 @@ The segmentations will then be saved in a subdirectory folder labeled `masks`.
 
 .. image:: ../_static/export-grayscale.png
   :align: center
+
+.. note::
+
+    The label map file name will be the same as grayscale image file name.
