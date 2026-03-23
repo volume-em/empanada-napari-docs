@@ -9,12 +9,11 @@ first attempt, if that happens please reach out to the napari developers directl
 .. important::
 
     **empanada-napari version 1.2 is now available!** This latest version has new models for nuclei and lipid doplets, new plugins and updated 2D and 3D inference modules.
-    We have also frozen the numba (0.59.0) and napari (0.4.18) versions to avoid dependency conflicts.
 
 
 .. note::
 
-  **Only Python 3.7, 3.8, 3.9 are supported, 3.10 and later are not.**
+  **Python 3.10 and later are preferred for new installation.**
 
     Please install git, gcc and g++ compilers before proceeding with installation.
 
@@ -54,7 +53,7 @@ New User Installation
 
 1. If you've previously installed and used conda, it's recommended (but optional) to create a new virtual environment in order to avoid dependency conflicts::
 
-    conda create -y -n empanada -c conda-forge python=3.9
+    conda create -y -n empanada -c conda-forge python=3.12
 
 #. Activate the new environment::
 
@@ -124,7 +123,7 @@ From here, you will need to update your current version of empanada-napari::
 
     Then you will need to install the latest version using pip::
 
-        pip install empanada-napari==1.2.1
+        pip install empanada-napari==1.2.2
 
 Now you can launch napari with the latest version of empanada-napari::
 
