@@ -13,7 +13,7 @@ first attempt, if that happens please reach out to the napari developers directl
 
 .. note::
 
-  **Python 3.10 and later are preferred for new installation.**
+  **Python 3.10 to 3.13, and napari 0.6.6 are preferred for new installation.**
 
     Please install git, gcc and g++ compilers before proceeding with installation.
 
@@ -65,7 +65,7 @@ New User Installation
 
 #. Install napari with pip::
 
-    pip install "napari[all]"
+    pip install "napari[all]==0.6.6"
 
 #. To verify installation, run::
 
@@ -123,7 +123,7 @@ From here, you will need to update your current version of empanada-napari::
 
     Then you will need to install the latest version using pip::
 
-        pip install empanada-napari==1.2.2
+        pip install empanada-napari==1.2.3
 
 Now you can launch napari with the latest version of empanada-napari::
 
