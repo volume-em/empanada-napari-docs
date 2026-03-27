@@ -52,23 +52,7 @@ New & Existing User Installation
 
     Users working with GPUs on Windows machines, please see our :ref:`FAQ <general-faqs>` section regarding installation steps.
 
-1. If you've previously installed and used conda, it's recommended (but optional) to create a new virtual environment in order to avoid dependency conflicts::
-
-    conda create -y -n empanada -c conda-forge python=3.12
-
-#. Activate the new environment::
-
-    conda activate empanada
-
-#. Install pyqt with conda::
-
-    conda install pyqt
-
-#. Install napari with pip::
-
-    pip install "napari[all]==0.6.6"
-
-#. To verify installation, run::
+.. note::
 
     Since the release of empanada-napari version 1.2.2, Python 3.9 and below are no longer supported. If you have an existing installation, we recommend creating a new environment with a supported Python version (3.10-3.13) to avoid conflicts.
 
@@ -162,6 +146,7 @@ New & Existing User Installation
         Newer versions of dependencies such as PyTorch no longer support MacOS with Intel chips. If you are still having issues, we recommend creating an environment with python=3.9, then installing empanada-napari==1.2.1 and napari==0.4.18. 
         
         For step-by-step instructions, :ref:`click here <older-empanada-napari>`.
+
 
 
 To verify installation, run::
