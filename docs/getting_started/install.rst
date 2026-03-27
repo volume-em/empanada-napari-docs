@@ -3,8 +3,9 @@
 Installation
 ------------
 
-napari is still considered alpha phase software and may not install correctly on the
+Napari is still considered alpha phase software and may not install correctly on the
 first attempt, if that happens please reach out to the napari developers directly `here <https://github.com/napari/napari/issues>`_.
+If you're having issues with empanada-napari, you can reach out to the developers `here <https://github.com/volume-em/empanada-napari/issues>`_.
 
 .. important::
 
@@ -13,7 +14,7 @@ first attempt, if that happens please reach out to the napari developers directl
 
 .. note::
 
-  **Python 3.10 and later are preferred for new installation.**
+  **Python 3.10 to 3.13 and Napari 0.6.6 are preferred for new installation.**
 
     Please install git, gcc and g++ compilers before proceeding with installation.
 
@@ -29,7 +30,7 @@ Conda Installation
 
 2. Download the correct installer for your OS (Mac, Linux, Windows).
 
-3. After installing `conda`, open a new terminal or command prompt window.
+3. After installing `conda`, open a new terminal or command/anaconda prompt window.
 
 4. Verify conda installed correctly with::
 
@@ -44,89 +45,113 @@ Conda Installation
 
 .. _new-install:
 
-New User Installation
+New & Existing User Installation
 =====================
 
 .. note::
 
     Users working with GPUs on Windows machines, please see our :ref:`FAQ <general-faqs>` section regarding installation steps.
 
-1. If you've previously installed and used conda, it's recommended (but optional) to create a new virtual environment in order to avoid dependency conflicts::
-
-    conda create -y -n empanada -c conda-forge python=3.12
-
-#. Activate the new environment::
-
-    conda activate empanada
-
-#. Install pyqt with conda::
-
-    conda install pyqt
-
-#. Install napari with pip::
-
-    pip install "napari[all]"
-
-#. To verify installation, run::
-
-    napari
-
-For alternative and more detailed installation instructions, see the
-`official napari installation tutorial <https://napari.org/tutorials/fundamentals/installation>`_.
-
-From here the easiest way to install empanada-napari is directly in napari.
-
-1. From the “Plugins” menu, select “Install/Uninstall Plugins...”.
-
-.. image:: ../_static/plugin-menu.png
-  :align: center
-  :width: 200px
-  :alt: Napari Plugin menu
-
-2. In the resulting window that opens, where it says “Install by name/URL”, type "empanada-napari".
-
-.. image:: ../_static/plugin-install-dialog.png
-  :align: center
-  :width: 500px
-  :alt: Plugin installation dialog
-
-3. Click the “Install” button next to the input bar.
-
-If installation was successful you should see empanada-napari in the Plugins menu. If you don't, restart napari.
-
-If you still don't see it, try installing the plugin with pip::
-
-    pip install empanada-napari --upgrade
-
-
-.. _update-install:
-
-Existing User Version Update
-==============================
-
-To update to the newest version of empanada-napari, you must uninstall the older version.
-
-If you installed napari into a virtual environment as suggested in the original release documentation, be sure to activate it::
-
-    conda activate empanada
-
-From here, you will need to update your current version of empanada-napari::
-
-    pip install empanada-napari --upgrade
-
 .. note::
 
-    You can also update to the current version by uninstalling empanada-napari::
+    Since the release of empanada-napari version 1.2.2, Python 3.9 and below are no longer supported. If you have an existing installation, we recommend creating a new environment with a supported Python version (3.10-3.13) to avoid conflicts.
 
-        pip uninstall empanada-napari
+.. tab-set::
+
+   .. tab-item:: Windows
+
+    #. Create a new virtual environment::
+
+        conda create -y -n empanada -c conda-forge python=3.11
+
+    #. Activate the new environment::
+        
+        conda activate empanada
+        
+    #. Install napari 0.6.6 with pip::
+        
+        pip install napari[all]==0.6.6
+        
+    For alternative and more detailed installation instructions, see the `official napari installation tutorial <https://napari.org/0.6.6/tutorials/fundamentals/installation.html>`_.
+    
+    4. From here, install empanada-napari with pip::
+        
+        pip install empanada-napari
+
+   .. tab-item:: Linux
+
+    #. Create a new virtual environment::
+
+        conda create -y -n empanada -c conda-forge python=3.11
+
+    #. Activate the new environment::
+        
+        conda activate empanada
+        
+    #. Install napari 0.6.6 with pip::
+        
+        pip install napari[all]==0.6.6
+        
+    For alternative and more detailed installation instructions, see the `official napari installation tutorial <https://napari.org/0.6.6/tutorials/fundamentals/installation.html>`_.
+    
+    4. From here, install empanada-napari with pip::
+        
+        pip install empanada-napari
+
+   .. tab-item:: MacOS (Apple Silicon)
+
+    #. Create a new virtual environment::
+
+        conda create -y -n empanada -c conda-forge python=3.11
+
+    #. Activate the new environment::
+        
+        conda activate empanada
+        
+    #. Install napari 0.6.6 and pyqt with conda::
+        
+        conda install -c conda-forge napari==0.6.6 pyqt
+        
+    For alternative and more detailed installation instructions, see the `official napari installation tutorial <https://napari.org/0.6.6/tutorials/fundamentals/installation.html>`_.
+    
+    4. From here, install empanada-napari with pip::
+        
+        pip install empanada-napari
+
+   .. tab-item:: MacOS (Intel)
+
+    #. Create a new virtual environment::
+
+        conda create -y -n empanada -c conda-forge python=3.11
+
+    #. Activate the new environment::
+        
+        conda activate empanada
+
+    #. Downgrade Numpy with pip::
+
+        pip install --upgrade numpy==1.26.4
+        
+    #. Install napari 0.6.6 and pyqt with conda::
+        
+        conda install -c conda-forge napari==0.6.6 pyqt
+        
+    For alternative and more detailed installation instructions, see the `official napari installation tutorial <https://napari.org/0.6.6/tutorials/fundamentals/installation.html>`_.
+
+    5. From here, install empanada-napari with pip::
+        
+        pip install empanada-napari
+
+    .. note::
+        Newer versions of dependencies such as PyTorch no longer support MacOS with Intel chips. If you are still having issues, we recommend creating an environment with python=3.9, then installing empanada-napari==1.2.1 and napari==0.4.18. 
+        
+        For step-by-step instructions, :ref:`click here <older-empanada-napari>`.
 
 
-    Then you will need to install the latest version using pip::
 
-        pip install empanada-napari==1.2.2
+To verify installation, run::
 
-Now you can launch napari with the latest version of empanada-napari::
+    napari &
 
-    napari
-
-
+If installation was successful you should see empanada-napari in the Plugins menu. If you don't, restart napari.
+For further troubleshooting, please see the :ref:`FAQ <faqs>`.
