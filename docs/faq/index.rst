@@ -21,6 +21,38 @@ General questions and troubleshooting
 
     If you encounter problems with installing empanada-napari, try restarting napari or installing the plugin using pip.
     If you still face difficulties, consider creating a new virtual environment to avoid dependency conflicts.
+    Please check the `Issues` tab on the `empanada-napari GitHub <https://github.com/volume-em/empanada-napari/issues?q=is%3Aissue%20state%3Aclosed>`_, 
+    you may find your error documented there. If not, please create your own issue!
+
+.. _older-empanada-napari:
+.. dropdown:: Installing an older version of empanada-napari
+
+    In some cases, newer versions of some dependencies may not support your device (e.g. PyTorch and Intel MacOS).
+    If you are experiencing errors installing the latest version, or errors during computation, you can downgrade to empanada-napari 1.2.1:
+    
+    #. Create a new virtual environment::
+
+        conda create -y -n empanada -c conda-forge python=3.9
+
+    #. Activate the new environment::
+        
+        conda activate empanada
+        
+    #. Install napari 0.4.18 and pyqt with conda::
+        
+        conda install -c conda-forge napari==0.4.18 pyqt
+        
+    For alternative and more detailed installation instructions, see the `official napari installation tutorial <https://napari.org/0.4.18/tutorials/fundamentals/installation.html>`_.
+
+    5. From here, install empanada-napari 1.2.1 with pip::
+        
+        pip install empanada-napari==1.2.1
+
+.. dropdown:: I'm getting an error saying my Nvidia driver is out of date
+    
+    If you're getting a PyTorch error about an out of date Nvidia driver, you can try to update your driver, or downgrade torch and torchvision to versions 2.10.0 and 0.25.0::
+
+        pip install --upgrade torch==2.10.0 torchvision==0.25.0
 
 .. dropdown:: I downloaded empanada and I’m running a model for the first time. Why is it not working?
 
