@@ -87,7 +87,6 @@ empanada-napari
 .. important::
 
    empanada-napari version 1.2 has new models for nuclei and lipid droplets, new plugins and updated 2D and 3D inference modules.  
-   Numba (0.59.0), czfile (1.x)  and napari (0.4.18) are frozen to avoid dependency conflicts. 
    Check out how to update to the latest version :ref:`here! <update-install>`
 
 .. note::
