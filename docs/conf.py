@@ -38,7 +38,7 @@ html_theme = 'pydata_sphinx_theme'
 html_theme_options = {
 	"primary_sidebar_end": ["indices.html", "sidebar-ethical-ads.html"],
 	"show_nav_level": 0,
-	"announcement": "<b>empanada-napari v1.2 now has models for mitochondria, nuclei and lipid droplets! NucleoNet has been updated. Update <a href='https://empanada.readthedocs.io/en/latest/getting_started/install.html'>here!</a></b>",
+	"announcement": "<b>empanada-napari v1.2.4 is now available! New models for mitochondria, nuclei, and lipid droplets. Update <a href='https://empanada.readthedocs.io/en/latest/getting_started/install.html'>here!</a></b>",
 }
 html_logo = '_static/empanada_logo_icon.png'
 html_favicon = '_static/favicon.ico'
