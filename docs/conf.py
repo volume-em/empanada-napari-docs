@@ -7,9 +7,9 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'empanada-napari-v1.2'
-copyright = '2025, Abhishek Bhardwaj, Ryan Conrad, Madeline Barry and Kedar Narayan'
-author = 'Abhishek Bhardwaj'
-release = '1.2'
+copyright = '2026 Allan Almeida and Kedar Narayan'
+author = 'Allan Almeida'
+release = '1.2.4'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
