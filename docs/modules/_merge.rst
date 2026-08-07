@@ -13,6 +13,8 @@ Parameters
 ===============
 
 **labels layer:** The napari labels layer on which to apply operations.
+Renaming a layer in the napari viewer updates this (and other) plugin
+dropdowns immediately; you do not need to close and reopen the plugin.
 
 **points layer:** A napari points layer used to select instances for merging.
 

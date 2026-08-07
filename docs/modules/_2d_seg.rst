@@ -43,8 +43,11 @@ run independently on each, and the results are stitched together. By default, al
 128 pixels with their neighbors.
 
 **Batch Mode:** If checked, the selected model will be run independently on each
-xy slice in a stack of images. This can be used, for example, to run inference on
-all images in a folder by loading them with the "Open Folder..." option.
+slice in a stack of images, along the plane currently shown in the viewer
+(XY, XZ, or YZ)—not always XY. This is useful for checking which plane works
+best before running full 3D inference. It can also be used, for example, to run
+inference on all images in a folder by loading them with the "Open Folder..."
+option.
 
 **Use GPU:** Whether to use system GPU for running inference. If no GPU is detected
 on the workstation, then this parameter is ignored.
@@ -59,7 +62,27 @@ they are not supported by Apple Silicon.
 currently visible in the Napari viewing window. This makes it possible to navigate large images and selectively
 test model performance within a 2D ROI. This option will return an error if run on xz slices of a 3D image.
 
-**Confine to ROI:** ROIs can be created using a Shapes layer in Napari. When 2D inference is run it will only be performed on the areas within the drawn ROI.
+**Confine to ROI:** When checked, 2D inference runs only inside a region of
+interest. ROIs can come from either:
+
+* A **Shapes** layer (hand-drawn polygons), or
+* A **Labels** layer (e.g. an existing cell segmentation TIFF). Inference is
+  limited to non-zero labeled regions (crop to the bounding box, zero out
+  outside).
+
+How to use a Labels ROI:
+
+1. Load your image and your segmentation as a Labels layer.
+2. Open 2D Inference and check **Confine to ROI**.
+3. Select the Labels layer as the ROI (or leave it if it is the only Labels layer).
+4. Run inference.
+
+.. note::
+
+   If a Shapes layer is present, it takes priority over Labels (the original
+   workflow is preserved). Remove Shapes layers to force a Labels ROI.
+   Labels ROI is not compatible with Batch Mode and currently supports 2D
+   labels only.
 
 **Output to layer:** If checked, the output of the model will be inserted into the given
 output layer (next argument). This argument is incompatible with Batch mode and will raise
