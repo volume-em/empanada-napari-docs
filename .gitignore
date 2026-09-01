@@ -1,0 +1,13 @@
+# Virtual environment
+venv/
+.venv/
+
+# Sphinx build output
+docs/_build/
+
+# OS / editor
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
