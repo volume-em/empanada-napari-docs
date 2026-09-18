@@ -19,6 +19,13 @@ other empanada modules after training.
 standard directory structure specified for empanada (as for example is created
 by the :ref:`Save finetune/training patches <save-patches>` module).
 
+.. note::
+
+    If you have a set of already-labeled patches, you can directly import them
+    into the train directory and use this for fine-tuning. In other words, you
+    do not need to run an initial inference in empanada and correct these
+    predictions to create a fine-tuning dataset.
+
 **Validation directory (optional):** Validation directory. Must conform to the
 standard directory structure specified for empanada. Can be the same as **Train directory**.
 

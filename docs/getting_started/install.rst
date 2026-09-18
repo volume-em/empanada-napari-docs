@@ -12,11 +12,9 @@ If you're having issues with empanada-napari, you can reach out to the developer
     **empanada-napari version 1.2.4** includes models for mitochondria, nuclei, and lipid droplets, plus updated 2D and 3D inference modules.
 
 
-.. note::
+.. admonition:: Suggested
 
-  **Python 3.10 to 3.13 and Napari 0.6.6 are preferred for new installation.**
-
-    Please install git, gcc and g++ compilers before proceeding with installation.
+    Check that git, gcc and g++ compilers are installed before proceeding.
 
     1. Mac users please read `this <https://mac.install.guide/commandlinetools/4>`_.
 
@@ -100,6 +98,10 @@ New & Existing User Installation
 
    .. tab-item:: MacOS (Apple Silicon)
 
+    .. note::
+
+        **September 2026:** Temporary fix because of JIT deprecation.
+
     #. Create a new virtual environment::
 
         conda create -y -n empanada -c conda-forge python=3.11
@@ -108,9 +110,9 @@ New & Existing User Installation
 
         conda activate empanada
 
-    #. Install napari 0.6.6 and pyqt with conda::
+    #. Install napari 0.6.6 with pip::
 
-        conda install -c conda-forge napari==0.6.6 pyqt
+        pip install "napari[all]==0.6.6"
 
     #. Install empanada-napari 1.2.4 with pip::
 
@@ -120,6 +122,10 @@ New & Existing User Installation
 
    .. tab-item:: MacOS (Intel)
 
+    .. note::
+
+        **September 2026:** Temporary fix because of JIT deprecation.
+
     #. Create a new virtual environment::
 
         conda create -y -n empanada -c conda-forge python=3.11
@@ -128,17 +134,17 @@ New & Existing User Installation
 
         conda activate empanada
 
-    #. Downgrade Numpy with pip::
+    #. Install pinned packages with pip::
 
-        pip install --upgrade numpy==1.26.4
-
-    #. Install napari 0.6.6 and pyqt with conda::
-
-        conda install -c conda-forge napari==0.6.6 pyqt
-
-    #. Install empanada-napari 1.2.4 with pip::
-
-        pip install empanada-napari==1.2.4
+        pip install --only-binary=:all: \
+          "numpy==1.26.4" \
+          "torch==2.2.2" "torchvision==0.17.2" \
+          "numba==0.60.0" "llvmlite==0.43.0" \
+          "opencv-python==4.11.0.86" "opencv-python-headless==4.11.0.86" \
+          "imagecodecs==2026.1.14" \
+          "triangle==20230923" \
+          "napari[all]==0.6.6" \
+          "empanada-napari==1.2.4"
 
     For alternative and more detailed napari installation instructions, see the `official napari installation tutorial <https://napari.org/0.6.6/tutorials/fundamentals/installation.html>`_.
 
