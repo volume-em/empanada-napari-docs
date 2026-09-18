@@ -108,9 +108,9 @@ New & Existing User Installation
 
         conda activate empanada
 
-    #. Install napari 0.6.6 and pyqt with conda::
+    #.  Install napari 0.6.6 with pip::
 
-        conda install -c conda-forge napari==0.6.6 pyqt
+         pip install napari[all]==0.6.6
 
     #. Install empanada-napari 1.2.4 with pip::
 
