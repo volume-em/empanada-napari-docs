@@ -12,12 +12,6 @@ weights as the default option. These weights have been trained using an unsuperv
 of over 1.5 million EM images sourced from numerous unique EM datasets, ensuring their broad applicability and robust performance.
 (Conrad and Narayan, Cell Syst 2023 `<https://www.cell.com/cell-systems/fulltext/S2405-4712(22)00494-X>`_)
 
-.. _user-form:
-
-.. raw:: html
-
-    <iframe width="800px" height="400px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=eHW3FHOX1UKFByUcotwrBioZ0-7xQKRDjr-VF_wnLMJUNTRDOTQ2SDU3QzZLTTlZSzZJRFZYNEdaSC4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
-
 
 .. grid:: 1
     :padding: 4
@@ -37,11 +31,6 @@ of over 1.5 million EM images sourced from numerous unique EM datasets, ensuring
             :expand:
 
             INSTALL EMPANADA-NAPARI
-
-
-.. raw:: html
-
-    <iframe width="900px" height="480px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=eHW3FHOX1UKFByUcotwrBioZ0-7xQKRDjr-VF_wnLMJUNFdNRDVMT08wWVFBTFRHWktGWDRRMU4xQi4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
 
 
 .. toctree::

@@ -320,9 +320,5 @@ Sharing your model
 .. dropdown:: Where do I go to upload my model?
 
     Now that you have finished training and finetuning your model, you can share it with the vEM community by visiting
-    `Zenodo <https://zenodo.org/>`_. Once you have uploaded your model, let us know by filling out this form:
-
-    .. raw:: html
-
-        <iframe width="700px" height="480px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=eHW3FHOX1UKFByUcotwrBioZ0-7xQKRDjr-VF_wnLMJUNFdNRDVMT08wWVFBTFRHWktGWDRRMU4xQi4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+    `Zenodo <https://zenodo.org/>`_.
 

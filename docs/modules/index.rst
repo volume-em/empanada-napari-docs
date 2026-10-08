@@ -8,10 +8,6 @@
 empanada-napari modules
 -----------------------
 
-.. note::
-    "Run Quantized Model" is only supported for devices running on Intel Chips.
-
-
 .. _inference-modules:
 
 =================================
