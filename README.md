@@ -10,7 +10,7 @@ If you are new to Python or documentation, follow these step-by-step instruction
 
 ### 1. Prerequisites
 
-Ensure you have **Python 3.10** or newer installed.
+Ensure you have **Python 3.13** or newer installed.
 - [Download Python here](https://www.python.org/downloads/)
 
 ### 2. Set up your environment
